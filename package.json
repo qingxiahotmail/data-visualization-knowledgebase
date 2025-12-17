@@ -1,21 +1,18 @@
 {
-  "name": "excel-visualization-knowledgebase",
+  "name": "data-visualization-knowledgebase",
   "version": "1.0.0",
-  "description": "Excel数据可视化多模态知识库",
-  "main": "index.js",
+  "description": "数据可视化知识库，涵盖理论基础、技术实践、人文素养和现代技术",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "build": "npm run build",
     "test": "jest"
   },
-  "keywords": ["excel", "visualization", "knowledgebase", "multimodal"],
+  "keywords": ["data-visualization", "knowledgebase", "vibe-coding", "ai-visualization", "excel"],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^7.5.0",
-    "multer": "^1.4.5-lts.1",
     "cors": "^2.8.5"
   },
   "devDependencies": {
