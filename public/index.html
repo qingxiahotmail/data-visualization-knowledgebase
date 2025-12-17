@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化知识库</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fa fa-bar-chart"></i>
+                <h1>数据可视化知识库</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active"><i class="fa fa-home"></i> 首页</a>
+                <a href="#knowledgebase" class="nav-link"><i class="fa fa-book"></i> 知识库</a>
+                <a href="#course" class="nav-link"><i class="fa fa-graduation-cap"></i> 课程框架</a>
+                <a href="#multimedia" class="nav-link"><i class="fa fa-picture-o"></i> 多媒体</a>
+                <a href="#advisor" class="nav-link"><i class="fa fa-lightbulb-o"></i> 可视化辅导</a>
+                <a href="#about" class="nav-link"><i class="fa fa-info-circle"></i> 关于</a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="搜索知识库...">
+                <button id="searchBtn"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 首页 -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero">
+                    <h2>欢迎使用数据可视化知识库</h2>
+                    <p>探索数据可视化的最佳实践、技巧和示例，包括Vibe Coding和AI技术的最新应用，提升您的数据展示能力</p>
+                    <div class="quick-links">
+                        <a href="#knowledgebase" class="quick-link">
+                            <i class="fa fa-book"></i>
+                            <span>浏览知识库</span>
+                        </a>
+                        <a href="#advisor" class="quick-link">
+                            <i class="fa fa-lightbulb-o"></i>
+                            <span>获取可视化建议</span>
+                        </a>
+                        <a href="#multimedia" class="quick-link">
+                            <i class="fa fa-picture-o"></i>
+                            <span>查看多媒体资源</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="featured-content">
+                    <h3>精选内容</h3>
+                    <div class="featured-cards">
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fa fa-bar-chart"></i>
+                            </div>
+                            <h4>图表类型指南</h4>
+                            <p>了解不同图表类型的适用场景和最佳实践</p>
+                            <a href="#" class="card-link">阅读更多</a>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fa fa-line-chart"></i>
+                            </div>
+                            <h4>数据处理技巧</h4>
+                            <p>学习如何清洗、整理和优化数据源</p>
+                            <a href="#" class="card-link">阅读更多</a>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon">
+                                <i class="fa fa-pie-chart"></i>
+                            </div>
+                            <h4>高级可视化技术</h4>
+                            <p>掌握动态图表、交互式可视化等高级技术</p>
+                            <a href="#" class="card-link">阅读更多</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 知识库 -->
+        <section id="knowledgebase" class="section">
+            <div class="container">
+                <h2>知识库</h2>
+                <div class="knowledgebase-filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">分类：</label>
+                        <select id="categoryFilter">
+                            <option value="">全部</option>
+                            <option value="数据处理">数据处理</option>
+                            <option value="统计基础">统计基础</option>
+                            <option value="表格可视化">表格可视化</option>
+                            <option value="数据准备">数据准备</option>
+                            <option value="图表类型">图表类型</option>
+                            <option value="特殊图表">特殊图表</option>
+                            <option value="动态图表">动态图表</option>
+                            <option value="可视化设计">可视化设计</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="searchKB">搜索：</label>
+                        <input type="text" id="searchKB" placeholder="搜索知识库条目...">
+                    </div>
+                </div>
+                <div id="knowledgebaseList" class="knowledgebase-list">
+                    <!-- 知识库条目将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 课程框架 -->
+        <section id="course" class="section">
+            <div class="container">
+                <h2>课程框架</h2>
+                
+                <!-- 核心教学理念 -->
+                <div id="corePhilosophy" class="core-philosophy">
+                    <h3>核心教学理念</h3>
+                    <div class="philosophy-content">
+                        <!-- 核心理念内容将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 课程模块 -->
+                <div class="course-modules">
+                    <h3>课程模块</h3>
+                    <div class="module-filters">
+                        <button class="module-filter-btn active" data-type="all">全部</button>
+                        <button class="module-filter-btn" data-type="theory">理论模块</button>
+                        <button class="module-filter-btn" data-type="practice">实践模块</button>
+                        <button class="module-filter-btn" data-type="humanity">人文素养</button>
+                        <button class="module-filter-btn" data-type="project">实战项目</button>
+                    </div>
+                    <div id="modulesList" class="modules-list">
+                        <!-- 模块列表将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 教学与评估方法 -->
+                <div class="teaching-assessment">
+                    <div class="teaching-methods">
+                        <h3>教学方法</h3>
+                        <ul id="teachingMethods">
+                            <!-- 教学方法将通过JavaScript动态生成 -->
+                        </ul>
+                    </div>
+                    <div class="assessment-methods">
+                        <h3>评估方式</h3>
+                        <div id="assessmentMethods">
+                            <!-- 评估方式将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 多媒体 -->
+        <section id="multimedia" class="section">
+            <div class="container">
+                <h2>多媒体资源</h2>
+                <div class="multimedia-filters">
+                    <div class="filter-group">
+                        <label for="mediaTypeFilter">类型：</label>
+                        <select id="mediaTypeFilter">
+                            <option value="">全部</option>
+                            <option value="image">图片</option>
+                            <option value="video">视频</option>
+                            <option value="audio">音频</option>
+                            <option value="document">文档</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="searchMedia">搜索：</label>
+                        <input type="text" id="searchMedia" placeholder="搜索多媒体文件...">
+                    </div>
+                </div>
+                <div id="multimediaGallery" class="multimedia-gallery">
+                    <!-- 多媒体资源将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 可视化辅导 -->
+        <section id="advisor" class="section">
+            <div class="container">
+                <h2>可视化辅导</h2>
+                <div class="advisor-tools">
+                    <div class="tool-card">
+                        <h3>图表推荐</h3>
+                        <form id="chartRecommendForm">
+                            <div class="form-group">
+                                <label for="dataType">数据类型：</label>
+                                <select id="dataType">
+                                    <option value="numerical">数值型</option>
+                                    <option value="categorical">分类型</option>
+                                    <option value="timeSeries">时间序列</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="analysisPurpose">分析目的：</label>
+                                <select id="analysisPurpose">
+                                    <option value="comparison">比较</option>
+                                    <option value="trend">趋势</option>
+                                    <option value="composition">构成</option>
+                                    <option value="distribution">分布</option>
+                                    <option value="relationship">关系</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">获取推荐</button>
+                        </form>
+                        <div id="chartRecommendations" class="recommendations"></div>
+                    </div>
+
+                    <div class="tool-card">
+                        <h3>最佳实践</h3>
+                        <div class="form-group">
+                            <label for="chartTypeSelect">图表类型：</label>
+                            <select id="chartTypeSelect">
+                                <option value="general">通用</option>
+                                <option value="barChart">柱状图</option>
+                                <option value="lineChart">折线图</option>
+                                <option value="pieChart">饼图</option>
+                                <option value="scatterChart">散点图</option>
+                            </select>
+                        </div>
+                        <div id="bestPractices" class="practices-list"></div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h3>常见问题</h3>
+                    <div class="form-group">
+                        <label for="faqSearch">搜索问题：</label>
+                        <input type="text" id="faqSearch" placeholder="搜索常见问题...">
+                    </div>
+                    <div id="faqList" class="faq-list">
+                        <!-- 常见问题将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于 -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>关于知识库</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>知识库简介</h3>
+                        <p>数据可视化知识库是一个综合性的学习资源平台，旨在帮助用户掌握数据可视化的最佳实践、技巧和方法，包括Vibe Coding和AI技术的最新应用。</p>
+                        <p>本知识库整合了多种数据可视化资源，结合了多模态技术，提供了丰富的文本内容、图片示例和交互式辅导功能。</p>
+                        <h3>主要功能</h3>
+                        <ul>
+                            <li><i class="fa fa-check"></i> 结构化的知识库内容</li>
+                            <li><i class="fa fa-check"></i> 丰富的多媒体资源</li>
+                            <li><i class="fa fa-check"></i> 智能图表推荐</li>
+                            <li><i class="fa fa-check"></i> 最佳实践指导</li>
+                            <li><i class="fa fa-check"></i> 常见问题解答</li>
+                        </ul>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" id="statItems">0</div>
+                            <div class="stat-label">知识库条目</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="statMedia">0</div>
+                            <div class="stat-label">多媒体资源</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="statCategories">0</div>
+                            <div class="stat-label">内容分类</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="statViews">0</div>
+                            <div class="stat-label">访问次数</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>数据可视化知识库</h4>
+                    <p>提升您的数据展示能力，让数据说话</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#knowledgebase">知识库</a></li>
+                        <li><a href="#multimedia">多媒体</a></li>
+                        <li><a href="#advisor">可视化辅导</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p><i class="fa fa-envelope"></i> contact@example.com</p>
+                    <p><i class="fa fa-phone"></i> +86 123 4567 8910</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 数据可视化知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="app.js"></script>
+</body>
+</html>
